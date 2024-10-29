@@ -2,16 +2,20 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import NavHeader from "../NavHeader";
 import NavLink from "../NavLink";
+import DropdownMenu from "../DropdownMenu";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
   const menuBtnEl = useRef();
 
   const navigation = [
+    { name: "Products", href: "/#hero" },
     { name: "Features", href: "/#visualfeatures" },
-    { name: "Pricing", href: "/#pricing" },
-    { name: "Testimonials", href: "/#testimonials" },
-    { name: "FAQs", href: "/#faqs" },
+    // { name: "Pricing", href: "/#pricing" },
+    { name: "Feedback", href: "/#feedback" },
+    // { name: "Feedback", href: "/#testimonials" },
+    // { name: "FAQs", href: "/#faqs" },
   ];
 
   useEffect(() => {
@@ -43,10 +47,16 @@ const Navbar = () => {
             <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
               {navigation.map((item, idx) => {
                 return (
-                  <li key={idx} className="hover:text-blue-500">
+                  <li
+                    key={idx}
+                    className="hover:text-blue-500"
+                    onMouseEnter={() => item.name === "Products" && setDropdownVisible(true)}
+                    onMouseLeave={() => item.name === "Products" && setDropdownVisible(false)}
+                  >
                     <Link href={item.href} className="block">
                       {item.name}
                     </Link>
+                    {item.name === "Products" && dropdownVisible && <DropdownMenu />}
                   </li>
                 );
               })}

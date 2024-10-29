@@ -15,7 +15,7 @@ const Hero = () => (
           falseState: "opacity-0",
         }}
       >
-        <div>
+        <div id="hero">
           <div className="space-y-5 max-w-3xl mx-auto text-center">
             <h1 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#FC466B] to-[#3F5EFB] font-extrabold mx-auto sm:text-6xl">
               Hi Talker: <br />
@@ -31,7 +31,7 @@ const Hero = () => (
                 href="/#pricing"
                 className="flex items-center text-white bg-blue-600 hover:bg-blue-500 active:bg-gray-300 "
               >
-                Get Started
+                Just it Now
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"

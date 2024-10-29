@@ -13,9 +13,9 @@ export default function Home() {
       <VisualFeatures />
       {/* <Features /> */}
       {/* <CTA /> */}
-      <Testimonial />
-      <Pricing />
-      <FAQs />
+      {/* <Testimonial /> */}
+      {/* <Pricing /> */}
+      {/* <FAQs /> */}
     </>
   );
 }
