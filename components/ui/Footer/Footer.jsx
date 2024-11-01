@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
-    <footer className="mt-20">
-      <div className="custom-screen">
-        <div className="mt-10 py-8 border-t border-gray-800 items-center justify-between sm:flex">
-          <p className="text-gray-400 text-center">© 2024 PingGU Inc. All rights reserved.</p>
+    <footer className="">
+      <div id="footer" className="bg-gray-900 py-8 items-center justify-between sm:flex">
+        <div className="container mx-auto text-center text-white">
           <div className="flex items-center justify-center gap-x-6 text-blue-500 mt-6 sm:mt-0">
-            <a href="/" target="_blank" aria-label="social media">
+            <p className="text-gray-400 text-center">© 2024 PingGU Inc. All rights reserved.</p>
+            {/* <a href="/" target="_blank" aria-label="social media">
               <svg
                 className="w-6 h-6 hover:text-gray-200 duration-150"
                 fill="none"
@@ -61,7 +61,7 @@ const Footer = () => {
                   </clipPath>
                 </defs>
               </svg>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

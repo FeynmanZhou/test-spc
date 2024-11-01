@@ -66,7 +66,7 @@ const Navbar = () => {
                 Sign in
               </Link>
               <NavLink
-                href="/pricing"
+                href="/login"
                 className="flex items-center justify-center gap-x-1 text-sm bg-gray-800 text-gray-200 font-medium border hover:bg-gray-900 md:inline-flex"
               >
                 Start now
