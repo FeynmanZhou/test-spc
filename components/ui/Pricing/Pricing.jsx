@@ -5,48 +5,46 @@ import Button from "../Button";
 const Pricing = () => {
   const plans = [
     {
-      name: "Basic plan",
-      desc: "For new creators building their list",
-      price: 0,
+      name: "Basic",
+      desc: "100 AI Coins",
+      price: 10,
       isMostPop: false,
       features: [
-        "300 emails/day",
-        "Customizable Email Templates",
-        "Drag & Drop Editor",
-        "Transactional Emails",
-        "SMS & WhatsApp Campaigns",
-        "Phone support",
+        "Chat: 100 Requests",
+        "Text to Speech: 20 Minutes",
+        "Text to Avatar: 20 Seconds",
+        "Speech To Text: 10 Minutes",
       ],
     },
     {
-      name: "Starter",
-      desc: "Ideal for growing businesses",
-      price: 12,
+      name: "Standard",
+      desc: "500 AI Coins",
+      price: 30,
       isMostPop: true,
       features: [
-        "From 20k emails/month",
-        "Marketing Automation",
-        "A/B testing",
-        "Advanced statistics",
-        "Multi-user access",
-        "Send time optimization",
+        "Chat: 500 Requests",
+        "Text To Speech: 100 Minutes",
+        "Text To Avatar: 100 Seconds",
+        "Speech To Text: 50 Minutes",
       ],
     },
     {
-      name: "Business",
-      desc: "Built for marketing managers",
-      price: 32,
+      name: "Premium",
+      desc: "2000 AI Coins",
+      price: 60,
       isMostPop: false,
       features: [
-        "Everything in Starter",
-        "Enterprise-grade Security",
-        "Advanced Integrations",
-        "Sub-account Management",
-        "Tailored Onboarding",
-        "Personalized support",
+        "Chat: 2000 Requests",
+        "Text To Speech: 400 Minutes",
+        "Text To Avatar: 400 Seconds",
+        "Speech To Text: 200 Minutes",
       ],
     },
   ];
+
+  const handleBuyPlan = () => {
+    window.location.href = "https://hitalker.com/#/user/balance";
+  };
 
   const mostPopPricingBg =
     "radial-gradient(100.39% 100.39% at 51.31% -0.71%, #3B82F6 0%, rgba(59, 130, 246, 0) 100%)";
@@ -81,7 +79,8 @@ const Pricing = () => {
                   {item.name}
                 </span>
                 <div className="text-gray-800 text-3xl font-semibold">
-                  ${item.price} <span className="text-xl text-gray-400 font-normal">/mo</span>
+                  ￥{item.price}
+                  {/* <span className="text-xl text-gray-400 font-normal">/mo</span> */}
                 </div>
                 <p className="text-gray-500">{item.desc}</p>
               </div>
@@ -107,6 +106,7 @@ const Pricing = () => {
                 </ul>
                 <div className="pt-8">
                   <Button
+                    onClick={handleBuyPlan}
                     className={`w-full rounded-full text-white ring-offset-2 focus:ring ${
                       item.isMostPop
                         ? "bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 ring-blue-600"

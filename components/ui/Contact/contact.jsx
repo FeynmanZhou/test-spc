@@ -38,7 +38,7 @@ const Contact = () => {
   return (
     <div>
       <div
-        id="feedback"
+        id="contact"
         className="py-16 bg-gradient-to-r from-[#6372ff] to-[#5ca9fb] text-white text-opacity-75"
       >
         <div className="container mx-auto px-4 flex items-center justify-center">

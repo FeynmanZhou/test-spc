@@ -4,7 +4,8 @@ const Footer = () => {
       <div id="footer" className="bg-gray-900 py-8 items-center justify-between sm:flex">
         <div className="container mx-auto text-center text-white">
           <div className="flex items-center justify-center gap-x-6 text-blue-500 mt-6 sm:mt-0">
-            <p className="text-gray-400 text-center">© 2024 PingGU Inc. All rights reserved.</p>
+            <p className="text-gray-400 text-center">© 2024 PingGu Inc. All rights reserved.</p>
+            {/* 社交媒体按钮 */}
             {/* <a href="/" target="_blank" aria-label="social media">
               <svg
                 className="w-6 h-6 hover:text-gray-200 duration-150"
