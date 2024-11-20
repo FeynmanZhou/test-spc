@@ -13,9 +13,9 @@ const Navbar = () => {
     window.location.href = "https://hitalker.com/";
   };
 
-  const handleRegister = () => {
-    window.location.href = "https://hitalker.com/";
-  };
+  // const handleRegister = () => {
+  //   window.location.href = "https://hitalker.com/";
+  // };
 
   const navigation = [
     { name: "Products", href: "/#hero" },
@@ -70,15 +70,15 @@ const Navbar = () => {
               })}
             </ul>
             <div className="gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-              <Link href="#" onClick={handleLogin} className="block hover:text-blue-500">
+              {/* <Link href="#" onClick={handleLogin} className="block hover:text-blue-500">
                 Sign in
-              </Link>
+              </Link> */}
               <NavLink
                 href="#"
                 onClick={handleLogin}
                 className="flex items-center justify-center gap-x-1 text-sm bg-gray-800 text-gray-200 font-medium border hover:bg-gray-900 md:inline-flex"
               >
-                Sign up
+                Sign in
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
