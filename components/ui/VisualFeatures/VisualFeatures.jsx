@@ -6,7 +6,7 @@ const VisualFeatures = () => {
   const features = [
     {
       title: "Speech Evaluator",
-      desc: "Provide an AI avatar with comprehensive report to improve clarity, accuracy, and fluency of your speech. It has been widely used in various Toastmasters clubs, public speaking training, and English training",
+      desc: "Provide an AI avatar with comprehensive report to improve clarity, accuracy, and fluency of your speech. It has been widely used in Toastmasters clubs, Public Speaking Training, and English Training",
       video: "/video/SPC_Introduce.mp4",
     },
     {

@@ -109,7 +109,7 @@ const Contact = () => {
               </div>
               {submitted && (
                 <div className="mt-4 p-4 bg-white text-green-700 rounded shadow-md">
-                  提交成功！谢谢您的反馈。
+                  Thanks for the feedback!
                 </div>
               )}
             </form>
