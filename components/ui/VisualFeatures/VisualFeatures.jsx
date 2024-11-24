@@ -5,13 +5,13 @@ import Image from "next/image";
 const VisualFeatures = () => {
   const features = [
     {
-      title: "Individual Evaluator",
-      desc: "The Individual Evaluator for Public Speaking is a module that uses AI technology to provide personalized feedback to individuals seeking to improve their public speaking skills.",
+      title: "Speech Evaluator",
+      desc: "Provide an AI avatar with comprehensive report to improve clarity, accuracy, and fluency of your speech. It has been widely used in various Toastmasters clubs, public speaking training, and English training",
       video: "/video/SPC_Introduce.mp4",
     },
     {
-      title: "PPT Speech Evaluator",
-      desc: "The able Topic Evaluator for Topic Exercises is a module designed to help individuals improve their impromptu speaking skills. The module allows users to set topics and quantities, and then leverages cutting-edge AI technology to automatically generate questions based on those topics.",
+      title: "PPT Evaluator",
+      desc: "Increase your presentation rehearsal efficiency with AI-generated key message, performance analysis metrics, fine-tuned content.",
       video: "/video/PPT_Evaluator.mp4",
     },
   ];
@@ -20,12 +20,10 @@ const VisualFeatures = () => {
       <div id="visualfeatures" className="custom-screen text-gray-600">
         <div className="max-w-xl mx-auto text-center">
           <h2 className="text-gray-900 text-3xl font-semibold sm:text-4xl">
-            Elevate Your Speaking Skills with HiTalker
+           Improve your presentation and public speaking skills with AI
           </h2>
           <p className="mt-3">
-            Enhance your public speaking, boost yourconfidence, and engage your audience
-            effectively. Transform your presentations into memorable experiences—start your journey
-            with HiTalker today!
+          Analyze your performance through pronunciation, filler words, vocabulary, pace, and body language. AI-driven coach provides insights to polish your performance and get tailored guidance to amplify your impact on the stage.
           </p>
         </div>
         <div className="mt-12">

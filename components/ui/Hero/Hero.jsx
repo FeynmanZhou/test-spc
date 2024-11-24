@@ -22,13 +22,11 @@ const Hero = () => {
           <div id="hero">
             <div className="space-y-5 max-w-3xl mx-auto text-center">
               <h1 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#FC466B] to-[#3F5EFB] font-extrabold mx-auto sm:text-6xl">
-                Hi Talker: <br />
-                <span>Your AI Speech Partner</span>
+                Hitalker: <br />
+                <span>AI Presentation Coach for Every Speaker</span>
               </h1>
               <p className="max-w-xl mx-auto text-black">
-                Enhance your presentations with Hi Talker, the AI-powered assistant that provides
-                insightful feedback and helps you deliver engaging speeches. Elevate your speaking
-                skills today!
+              An end-to-end evaluation platform for public speech and presentation rehearsal, get real-time feedback, refine your delivery, and inspire any audience. From a beginner to presentation master!
               </p>
               <div className="flex justify-center font-medium text-sm">
                 <NavLink
@@ -36,7 +34,7 @@ const Hero = () => {
                   onClick={handleLogin}
                   className="flex items-center text-white bg-blue-600 hover:bg-blue-500 active:bg-gray-300 "
                 >
-                  Just it Now
+                  Try it free
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"

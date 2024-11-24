@@ -10,7 +10,7 @@ const Pricing = () => {
       price: 10,
       isMostPop: false,
       features: [
-        "Chat: 100 Requests",
+        "Chat: 100 Conversation Requests",
         "Text to Speech: 20 Minutes",
         "Text to Avatar: 20 Seconds",
         "Speech To Text: 10 Minutes",
@@ -22,7 +22,7 @@ const Pricing = () => {
       price: 30,
       isMostPop: true,
       features: [
-        "Chat: 500 Requests",
+        "Chat: 500 Conversation Requests",
         "Text To Speech: 100 Minutes",
         "Text To Avatar: 100 Seconds",
         "Speech To Text: 50 Minutes",
@@ -34,7 +34,7 @@ const Pricing = () => {
       price: 60,
       isMostPop: false,
       features: [
-        "Chat: 2000 Requests",
+        "Chat: 2000 Conversation Requests",
         "Text To Speech: 400 Minutes",
         "Text To Avatar: 400 Seconds",
         "Speech To Text: 200 Minutes",
@@ -53,7 +53,7 @@ const Pricing = () => {
     <SectionWrapper id="pricing" className="custom-screen">
       <div className="relative max-w-xl mx-auto text-center">
         <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-          Find a plan to power your business
+      Get started with advanced features to improve your skills! Pay as you go
         </h2>
       </div>
       <LayoutEffect
@@ -113,7 +113,7 @@ const Pricing = () => {
                         : "bg-gray-800 hover:bg-gray-700 ring-gray-800"
                     }`}
                   >
-                    Get Started
+                    Select plan
                   </Button>
                 </div>
               </div>
