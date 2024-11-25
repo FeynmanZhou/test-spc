@@ -22,7 +22,7 @@ const Hero = () => {
           <div id="hero">
             <div className="space-y-5 max-w-3xl mx-auto text-center">
               <h1 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#FC466B] to-[#3F5EFB] font-extrabold mx-auto sm:text-6xl">
-                Hitalker: <br />
+                HiTalker: <br />
                 <span>AI Presentation Coach for Every Speaker</span>
               </h1>
               <p className="max-w-xl mx-auto text-black">
