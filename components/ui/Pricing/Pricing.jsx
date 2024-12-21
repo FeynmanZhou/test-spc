@@ -1,46 +1,10 @@
 import LayoutEffect from "@/components/LayoutEffect";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "../Button";
+import { useLanguage } from '../../../context/LanguageContext';
 
 const Pricing = () => {
-  const plans = [
-    {
-      name: "Basic",
-      desc: "100 AI Coins",
-      price: 10,
-      isMostPop: false,
-      features: [
-        "Chat: 100 Conversation Requests",
-        "Text to Speech: 20 Minutes",
-        "Text to Avatar: 20 Seconds",
-        "Speech To Text: 10 Minutes",
-      ],
-    },
-    {
-      name: "Standard",
-      desc: "500 AI Coins",
-      price: 30,
-      isMostPop: true,
-      features: [
-        "Chat: 500 Conversation Requests",
-        "Text To Speech: 100 Minutes",
-        "Text To Avatar: 100 Seconds",
-        "Speech To Text: 50 Minutes",
-      ],
-    },
-    {
-      name: "Premium",
-      desc: "2000 AI Coins",
-      price: 60,
-      isMostPop: false,
-      features: [
-        "Chat: 2000 Conversation Requests",
-        "Text To Speech: 400 Minutes",
-        "Text To Avatar: 400 Seconds",
-        "Speech To Text: 200 Minutes",
-      ],
-    },
-  ];
+  const { t } = useLanguage();
 
   const handleBuyPlan = () => {
     window.location.href = "https://hitalker.com/#/user/balance";
@@ -51,9 +15,9 @@ const Pricing = () => {
 
   return (
     <SectionWrapper id="pricing" className="custom-screen">
-      <div className="relative max-w-xl mx-auto text-center">
+      <div className="relative max-w-3xl mx-auto text-center">
         <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-      Get started with advanced features to improve your skills! Pay as you go
+          {t('pricingTitle')}
         </h2>
       </div>
       <LayoutEffect
@@ -64,23 +28,22 @@ const Pricing = () => {
         }}
       >
         <div className="mt-16 justify-center gap-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-3">
-          {plans.map((item, idx) => (
+          {t('plans').map((item, idx) => (
             <div
               key={idx}
               className={`relative flex-1 flex items-stretch flex-col rounded-xl border border-gray-800 mt-6 sm:mt-0 ${
-                item.isMostPop ? "border border-blue-500" : ""
+                idx === 1 ? "border border-blue-500" : ""
               }`}
               style={{
-                backgroundImage: item.isMostPop ? mostPopPricingBg : "",
+                backgroundImage: idx === 1 ? mostPopPricingBg : "",
               }}
             >
               <div className="p-8 space-y-4 border-b border-gray-800 text-center">
-                <span className={`font-medium ${item.isMostPop ? "text-black" : "text-blue-600 "}`}>
+                <span className={`font-medium ${idx === 1 ? "text-black" : "text-blue-600"}`}>
                   {item.name}
                 </span>
                 <div className="text-gray-800 text-3xl font-semibold">
                   ￥{item.price}
-                  {/* <span className="text-xl text-gray-400 font-normal">/mo</span> */}
                 </div>
                 <p className="text-gray-500">{item.desc}</p>
               </div>
@@ -108,12 +71,12 @@ const Pricing = () => {
                   <Button
                     onClick={handleBuyPlan}
                     className={`w-full rounded-full text-white ring-offset-2 focus:ring ${
-                      item.isMostPop
+                      idx === 1
                         ? "bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 ring-blue-600"
                         : "bg-gray-800 hover:bg-gray-700 ring-gray-800"
                     }`}
                   >
-                    Select plan
+                    {t('selectPlan')}
                   </Button>
                 </div>
               </div>

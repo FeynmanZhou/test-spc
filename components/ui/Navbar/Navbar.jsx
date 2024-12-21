@@ -3,27 +3,23 @@ import { useEffect, useRef, useState } from "react";
 import NavHeader from "../NavHeader";
 import NavLink from "../NavLink";
 import DropdownMenu from "../DropdownMenu";
+import { useLanguage } from '../../../context/LanguageContext';
 
 const Navbar = () => {
   const [state, setState] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
   const menuBtnEl = useRef();
 
   const handleLogin = () => {
     window.location.href = "https://hitalker.com/";
   };
 
-  // const handleRegister = () => {
-  //   window.location.href = "https://hitalker.com/";
-  // };
-
   const navigation = [
-    { name: "Products", href: "/#hero" },
-    { name: "Features", href: "/#visualfeatures" },
-    { name: "Pricing", href: "/#pricing" },
-    { name: "Contact", href: "/#contact" },
-    // { name: "Feedback", href: "/#testimonials" },
-    // { name: "FAQs", href: "/#faqs" },
+    { name: t('products'), href: "/#hero" },
+    { name: t('features'), href: "/#visualfeatures" },
+    { name: t('pricing'), href: "/#pricing" },
+    { name: t('contact'), href: "/#contact" },
   ];
 
   useEffect(() => {
@@ -58,27 +54,46 @@ const Navbar = () => {
                   <li
                     key={idx}
                     className="hover:text-blue-500"
-                    onMouseEnter={() => item.name === "Products" && setDropdownVisible(true)}
-                    onMouseLeave={() => item.name === "Products" && setDropdownVisible(false)}
+                    onMouseEnter={() => item.name === t('products') && setDropdownVisible(true)}
+                    onMouseLeave={() => item.name === t('products') && setDropdownVisible(false)}
                   >
                     <Link href={item.href} className="block">
                       {item.name}
                     </Link>
-                    {item.name === "Products" && dropdownVisible && <DropdownMenu />}
+                    {item.name === t('products') && dropdownVisible && <DropdownMenu />}
                   </li>
                 );
               })}
             </ul>
             <div className="gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-              {/* <Link href="#" onClick={handleLogin} className="block hover:text-blue-500">
-                Sign in
-              </Link> */}
+              {/* 更新语言切换按钮样式 */}
+              <button
+                onClick={() => setLanguage(language === 'en' ? 'zh' : 'en')}
+                className="flex items-center text-sm"
+                aria-label="Toggle language"
+              >
+                <span className={`px-1 transition-all duration-200 ${
+                  language === 'zh'
+                    ? 'text-blue-600 font-medium text-base'
+                    : 'text-gray-500 hover:text-gray-700 text-sm'
+                }`}>
+                  中文
+                </span>
+                <span className="text-gray-300">/</span>
+                <span className={`px-1 transition-all duration-200 ${
+                  language === 'en'
+                    ? 'text-blue-600 font-medium text-base'
+                    : 'text-gray-500 hover:text-gray-700 text-sm'
+                }`}>
+                  EN
+                </span>
+              </button>
               <NavLink
                 href="#"
                 onClick={handleLogin}
                 className="flex items-center justify-center gap-x-1 text-sm bg-gray-800 text-gray-200 font-medium border hover:bg-gray-900 md:inline-flex"
               >
-                Sign in
+                {t('signin')}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"

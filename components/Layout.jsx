@@ -1,15 +1,18 @@
 import Head from "next/head";
 import Footer from "./ui/Footer";
 import Navbar from "./ui/Navbar";
+import { useLanguage } from '../context/LanguageContext';
 
 const Layout = ({ children }) => {
+  const { t } = useLanguage();
+  
   return (
     <>
       <Head>
-        <title>Hi Talker</title>
+        <title>{t('siteTitle')}</title>
         <meta
           name="description"
-          content="Gain control of your business's growth with HiTalker's comprehensive marketing, automation, and email marketing platform."
+          content={t('siteDescription')}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
