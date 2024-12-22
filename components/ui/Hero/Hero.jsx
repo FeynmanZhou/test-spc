@@ -2,13 +2,16 @@ import GradientWrapper from "@/components/GradientWrapper";
 import Image from "next/image";
 import NavLink from "../NavLink";
 import HeroImg from "@/public/images/Speech Copilot.png";
-// import HeroVideo from "@/public/video/SPC_Introduce.mp4";
 import LayoutEffect from "@/components/LayoutEffect";
+import { useLanguage } from '../../../context/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   const handleLogin = () => {
     window.location.href = "https://hitalker.com/";
   };
+
   return (
     <section>
       <div className="custom-screen py-4">
@@ -22,19 +25,19 @@ const Hero = () => {
           <div id="hero">
             <div className="space-y-5 max-w-3xl mx-auto text-center">
               <h1 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#FC466B] to-[#3F5EFB] font-extrabold mx-auto sm:text-6xl">
-                HiTalker: <br />
-                <span>AI Presentation Coach for Every Speaker</span>
+                {t('heroTitle')} <br />
+                <span>{t('heroSubtitle')}</span>
               </h1>
               <p className="max-w-xl mx-auto text-black">
-              An end-to-end evaluation platform for public speech and presentation rehearsal, get real-time feedback, refine your delivery, and inspire any audience. From a beginner to presentation master!
+                {t('heroDescription')}
               </p>
               <div className="flex justify-center font-medium text-sm">
                 <NavLink
                   href="#"
                   onClick={handleLogin}
-                  className="flex items-center text-white bg-blue-600 hover:bg-blue-500 active:bg-gray-300 "
+                  className="flex items-center text-white bg-blue-600 hover:bg-blue-500 active:bg-gray-300"
                 >
-                  Try it free
+                  {t('tryFree')}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -55,12 +58,6 @@ const Hero = () => {
               wrapperClassName="max-w-3xl h-[250px] top-12 inset-0 sm:h-[300px] lg:h-[650px]"
             >
               <Image src={HeroImg} className="shadow-lg rounded-2xl" alt="Hi Talker" />
-              {/* <video
-              className="shadow-lg rounded-2xl"
-              controls
-              src="/video/SPC_Introduce.mp4" // 替换为你的视频路径
-              type="video/mp4"
-            /> */}
             </GradientWrapper>
           </div>
         </LayoutEffect>
