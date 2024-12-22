@@ -1,4 +1,4 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from "../context/LanguageContext";
 import CTA from "@/components/ui/CTA";
 import FAQs from "@/components/ui/FAQs";
 import Features from "@/components/ui/Features";
@@ -10,15 +10,13 @@ import Contact from "@/components/ui/Contact";
 
 export default function Home() {
   const { t } = useLanguage();
-  
+
   return (
     <>
       <Hero />
       <VisualFeatures />
-   
       <Pricing />
-      
-      <Contact />
+      {/* <Contact /> */}
     </>
   );
 }
