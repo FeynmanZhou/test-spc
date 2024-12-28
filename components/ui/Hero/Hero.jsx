@@ -9,7 +9,7 @@ const Hero = () => {
   const { t } = useLanguage();
   
   const handleLogin = () => {
-    window.location.href = "https://hitalker.com/";
+    window.location.href = "https://hitalker.com/#/?from=welcome";
   };
 
   return (

@@ -5,8 +5,8 @@ const VisualFeatures = () => {
   const { t } = useLanguage();
   
   const videos = [
-    "https://hitalkerbucket.oss-cn-beijing.aliyuncs.com/welcome/hitalker-intro-ppte.mp4",
-    "https://hitalkerbucket.oss-cn-beijing.aliyuncs.com/welcome/hitalker-intro-avatar.mp4"
+    "https://hitalkerbucket.oss-cn-beijing.aliyuncs.com/welcome/hitalker-intro-avatar.mp4",
+    "https://hitalkerbucket.oss-cn-beijing.aliyuncs.com/welcome/hitalker-intro-ppte.mp4"
   ];
 
   return (
