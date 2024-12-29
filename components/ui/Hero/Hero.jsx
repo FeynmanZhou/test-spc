@@ -1,7 +1,7 @@
 import GradientWrapper from "@/components/GradientWrapper";
 import Image from "next/image";
 import NavLink from "../NavLink";
-import HeroImg from "@/public/images/Speech Copilot.png";
+import HeroImg from "@/public/images/Hitalker_home.png";
 import LayoutEffect from "@/components/LayoutEffect";
 import { useLanguage } from '../../../context/LanguageContext';
 

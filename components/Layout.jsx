@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>{t('siteTitle')}</title>
+        <title>{t('heroTitle')}</title>
         <meta
           name="description"
           content={t('siteDescription')}
