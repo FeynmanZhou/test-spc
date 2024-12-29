@@ -12,7 +12,7 @@ export const translations = {
     tryFree: "Try it free",
     
     // Hero section
-    heroTitle: "HiTalker:",
+    heroTitle: "HiTalker",
     heroSubtitle: "AI Presentation Coach for Every Speaker",
     heroDescription: "An end-to-end evaluation platform for public speech and presentation rehearsal, get real-time feedback, refine your delivery, and inspire any audience. From a beginner to presentation master!",
     
@@ -91,7 +91,7 @@ export const translations = {
     tryFree: "免费试用",
     
     // Hero section
-    heroTitle: "HiTalker:",
+    heroTitle: "HiTalker",
     heroSubtitle: "人人都能用的AI演讲教练",
     heroDescription: "一个端到端的公开演讲和演示练习评估平台，获取实时反馈，提升表达能力，激励任何听众。从初学者到演讲大师！",
     
