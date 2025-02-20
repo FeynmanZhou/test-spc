@@ -1,7 +1,9 @@
 import GradientWrapper from "@/components/GradientWrapper";
 import Image from "next/image";
 import NavLink from "../NavLink";
-import HeroImg from "@/public/images/hitalker_Home.png";
+
+import HeroImg from "@/public/images/Hitalker_home.png";
+
 import LayoutEffect from "@/components/LayoutEffect";
 import { useLanguage } from '../../../context/LanguageContext';
 
@@ -9,7 +11,7 @@ const Hero = () => {
   const { t } = useLanguage();
   
   const handleLogin = () => {
-    window.location.href = "https://hitalker.com/";
+    window.location.href = "https://hitalker.com/#/?from=welcome";
   };
 
   return (

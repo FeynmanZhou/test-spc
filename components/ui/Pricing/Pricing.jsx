@@ -7,7 +7,7 @@ const Pricing = () => {
   const { t } = useLanguage();
 
   const handleBuyPlan = () => {
-    window.location.href = "https://hitalker.com/#/user/balance";
+    window.location.href = "https://hitalker.com/#/user/balance?from=welcome";
   };
 
   const mostPopPricingBg =

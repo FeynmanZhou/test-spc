@@ -86,12 +86,13 @@ const Contact = () => {
       });
 
       // 发送到后端 API
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        body: submitData,
-      });
 
-      if (!response.ok) throw new Error("提交失败");
+      // const response = await fetch('/api/contact', {
+      //   method: 'POST',
+      //   body: submitData
+      // });
+
+      // if (!response.ok) throw new Error('提交失败');
 
       setSubmitted(true);
       setFormData(initialState);
