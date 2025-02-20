@@ -19,7 +19,7 @@ const Navbar = () => {
     { name: t("products"), href: "/#hero" },
     { name: t("features"), href: "/#visualfeatures" },
     { name: t("pricing"), href: "/#pricing" },
-    // { name: t('contact'), href: "/#contact" },
+    // { name: t("contact"), href: "/#contact" },
   ];
 
   useEffect(() => {
@@ -92,7 +92,7 @@ const Navbar = () => {
                   EN
                 </span>
               </button>
-              <NavLink
+              {/* <NavLink
                 href="#"
                 onClick={handleLogin}
                 className="flex items-center justify-center gap-x-1 text-sm bg-gray-800 text-gray-200 font-medium border hover:bg-gray-900 md:inline-flex"
@@ -110,7 +110,7 @@ const Navbar = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </NavLink>
+              </NavLink> */}
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import GradientWrapper from "@/components/GradientWrapper";
 import Image from "next/image";
 import NavLink from "../NavLink";
-import HeroImg from "@/public/images/Speech Copilot.png";
+import HeroImg from "@/public/images/hitalker_Home.png";
 import LayoutEffect from "@/components/LayoutEffect";
 import { useLanguage } from '../../../context/LanguageContext';
 
@@ -52,12 +52,13 @@ const Hero = () => {
                   </svg>
                 </NavLink>
               </div>
+              <div className="text-gray-500 !mt-[4px] text-xs">For Mac and Windows (not mobile)</div>
             </div>
             <GradientWrapper
-              className="mt-16 sm:mt-28"
+              className="mt-8 sm:mt-16"
               wrapperClassName="max-w-3xl h-[250px] top-12 inset-0 sm:h-[300px] lg:h-[650px]"
             >
-              <Image src={HeroImg} className="shadow-lg rounded-2xl" alt="Hi Talker" />
+              <Image src={HeroImg} className="shadow-lg rounded-2xl" alt="HiTalker" />
             </GradientWrapper>
           </div>
         </LayoutEffect>
