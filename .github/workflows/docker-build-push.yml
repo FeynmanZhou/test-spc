@@ -1,0 +1,55 @@
+name: Docker Build and Push
+
+# 添加 concurrency 配置
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true  # 当有新的 push 时，取消正在运行的工作流
+
+on:
+  push:
+    branches: [ "hitalker_main" ]  # 当这些分支有代码推送时触发
+  pull_request:
+    branches: [ "hitalker_main" ]  # 当向这些分支发起PR时触发
+
+# 添加权限配置
+permissions:
+  contents: read    # 允许读取仓库内容
+  packages: write   # 允许写入包（用于推送镜像）
+  actions: write    # 允许写入 Actions
+
+env:
+  REGISTRY: ZCareersContainerRegistry.azurecr.io
+  IMAGE_NAME: hitalker-welcome
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Log in to Azure Container Registry
+        uses: azure/docker-login@v1
+        with:
+          login-server: ${{ env.REGISTRY }}
+          username: ${{ secrets.AZURE_REGISTRY_USERNAME }}
+          password: ${{ secrets.AZURE_REGISTRY_PASSWORD }}
+
+      - name: Get current date
+        id: date
+        run: |
+          echo "date=$(date +'%Y%m%d')" >> $GITHUB_OUTPUT
+          echo "time=$(date +'%H%M%S')" >> $GITHUB_OUTPUT
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:v${{ steps.date.outputs.date }}_${{ steps.date.outputs.time }}.${{ github.run_number }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest 
