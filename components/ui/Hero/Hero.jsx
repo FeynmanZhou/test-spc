@@ -58,7 +58,14 @@ const Hero = () => {
               className="mt-8 sm:mt-16"
               wrapperClassName="max-w-3xl h-[250px] top-12 inset-0 sm:h-[300px] lg:h-[650px]"
             >
-              <Image src={HeroHomeImg} className="shadow-lg rounded-2xl" alt="HiTalker" />
+              <Image
+      src="https://hitalkerbucket.oss-cn-beijing.aliyuncs.com/welcome/hitalker_home.png"
+      width={2400} 
+      height={1300} 
+      className="shadow-lg rounded-2xl"
+      alt="HiTalker"
+      layout="responsive" 
+    />
             </GradientWrapper>
           </div>
         </LayoutEffect>
