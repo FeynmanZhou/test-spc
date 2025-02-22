@@ -1,10 +1,9 @@
 import GradientWrapper from "@/components/GradientWrapper";
 import Image from "next/image";
 import NavLink from "../NavLink";
+import HeroImg from "@/public/images/Hitalker_home.png";
 import LayoutEffect from "@/components/LayoutEffect";
 import { useLanguage } from '../../../context/LanguageContext';
-
-const HeroImg = "/images/Hitalker_home.png";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -59,15 +58,7 @@ const Hero = () => {
               className="mt-8 sm:mt-16"
               wrapperClassName="max-w-3xl h-[250px] top-12 inset-0 sm:h-[300px] lg:h-[650px]"
             >
-              <Image 
-                src={HeroImg} 
-                className="shadow-lg rounded-2xl" 
-                alt="HiTalker"
-                width={1920}
-                height={1080}
-                priority
-                quality={75}
-              />
+              <Image src={HeroImg} className="shadow-lg rounded-2xl" alt="HiTalker" />
             </GradientWrapper>
           </div>
         </LayoutEffect>
