@@ -22,8 +22,8 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 ## 2). Build docker image
 Usage:
 ```shell
-docker build . -t ZCareersContainerRegistry.azurecr.io/hitalker-landingpage:v20241104
-docker push ZCareersContainerRegistry.azurecr.io/hitalker-landingpage:v20241104
+docker build . -t ZCareersContainerRegistry.azurecr.io/hitalker-welcome:v20241104
+docker push ZCareersContainerRegistry.azurecr.io/hitalker-welcome:v20241104
 ``` 
 if need login, using
 ```shell
