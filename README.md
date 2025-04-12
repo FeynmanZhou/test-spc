@@ -34,7 +34,7 @@ or
 docker login ZCareersContainerRegistry.azurecr.io --username ZCareersContainerRegistry --password $password
 ```
 
-
+ 
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
