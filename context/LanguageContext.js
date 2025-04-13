@@ -10,6 +10,7 @@ export const translations = {
     contact: "Contact",
     signin: "Sign in",
     tryFree: "Try it free",
+    posts: "Posts",
     
     // Hero section
     heroTitle: "HiTalker",
@@ -89,6 +90,7 @@ export const translations = {
     contact: "联系我们",
     signin: "登录",
     tryFree: "免费试用",
+    posts: "活动",
     
     // Hero section
     heroTitle: "HiTalker",

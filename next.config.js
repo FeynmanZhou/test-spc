@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['hitalkerbucket.oss-cn-beijing.aliyuncs.com'],
   },
+  pageExtensions: ['js', 'jsx', 'mdx', 'md', 'ts', 'tsx'],
 }
 
 module.exports = nextConfig
