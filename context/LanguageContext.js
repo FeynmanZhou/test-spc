@@ -10,6 +10,7 @@ export const translations = {
     contact: "Contact",
     signin: "Sign in",
     tryFree: "Try it free",
+    posts: "Posts",
     
     // Hero section
     heroTitle: "HiTalker",
@@ -32,36 +33,43 @@ export const translations = {
     pricingTitle: "Get started with advanced features to improve your skills! Pay as you go",
     plans: [
       {
-        name: "Basic",
-        desc: "100 AI Coins",
-        price: "10",
+        name: "Free",
+        desc: "200 AI Coins",
+        price: "0",
         features: [
-          "Chat: 100 Conversation Requests",
-          "Text to Speech: 20 Minutes",
-          "Text to Avatar: 20 Seconds",
-          "Speech To Text: 10 Minutes"
+          "200 chats",
+          "20 minutes speeches",
+          "2 minutes avatars"
         ]
       },
       {
         name: "Standard",
         desc: "500 AI Coins",
-        price: "30",
+        price: "39",
         features: [
-          "Chat: 500 Conversation Requests",
-          "Text To Speech: 100 Minutes",
-          "Text To Avatar: 100 Seconds",
-          "Speech To Text: 50 Minutes"
+          "500 chats",
+          "50 minutes speeches",
+          "5 minutes avatars"
         ]
       },
       {
-        name: "Premium",
-        desc: "2000 AI Coins",
-        price: "60",
+        name: "Monthly",
+        desc: "3000 AI Coins",
+        price: "99",
         features: [
-          "Chat: 2000 Conversation Requests",
-          "Text To Speech: 400 Minutes",
-          "Text To Avatar: 400 Seconds",
-          "Speech To Text: 200 Minutes"
+          "3000 chats",
+          "30 minutes speeches",
+          "30 minutes avatars"
+        ]
+      },
+      {
+        name: "Seasonally",
+        desc: "10000 AI Coins",
+        price: "249",
+        features: [
+          "10000 chats",
+          "1000 minutes speeches",
+          "100 minutes avatars"
         ]
       }
     ],
@@ -89,6 +97,7 @@ export const translations = {
     contact: "联系我们",
     signin: "登录",
     tryFree: "免费试用",
+    posts: "活动",
     
     // Hero section
     heroTitle: "HiTalker",
@@ -111,36 +120,43 @@ export const translations = {
     pricingTitle: "开启进阶功能提升你的技能！按需付费",
     plans: [
       {
-        name: "基础版",
-        desc: "100 AI币",
-        price: "10",
+        name: "免费版",
+        desc: "200 AI币",
+        price: "0",
         features: [
-          "对话：100次会话请求",
-          "文字转语音：20分钟",
-          "文字转虚拟人：20秒",
-          "语音转文字：10分钟"
+          "200次对话",
+          "20分钟语音",
+          "2分钟虚拟人"
         ]
       },
       {
         name: "标准版",
         desc: "500 AI币",
-        price: "30",
+        price: "39",
         features: [
-          "对话：500次会话请求",
-          "文字转语音：100分钟",
-          "文字转虚拟人：100秒",
-          "语音转文字：50分钟"
+          "500次对话",
+          "50分钟语音",
+          "5分钟虚拟人"
         ]
       },
       {
-        name: "高级版",
-        desc: "2000 AI币",
-        price: "60",
+        name: "包月版",
+        desc: "3000 AI币",
+        price: "99",
         features: [
-          "对话：2000次会话请求",
-          "文字转语音：400分钟",
-          "文字转虚拟人：400秒",
-          "语音转文字：200分钟"
+          "3000次对话",
+          "30分钟语音",
+          "30分钟虚拟人"
+        ]
+      },
+      {
+        name: "包季版",
+        desc: "10000 AI币",
+        price: "249",
+        features: [
+          "10000次对话",
+          "1000分钟语音",
+          "100分钟虚拟人"
         ]
       }
     ],
