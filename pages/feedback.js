@@ -23,7 +23,7 @@ export default function Feedback() {
         </div>
         <div className="w-full max-w-2xl rounded-2xl shadow-xl border border-gray-100 bg-white p-4 sm:p-8">
           <iframe
-            src="https://nz16hldmtc.feishu.cn/share/base/form/shrcnEG8mkhxd0hlhJ819yNqJ0b"
+            src="https://nz16hldmtc.feishu.cn/share/base/form/shrcnZjxGGhu1vVvpcgDeZ5hVfb"
             width="100%"
             height="800px"
             frameBorder="0"
