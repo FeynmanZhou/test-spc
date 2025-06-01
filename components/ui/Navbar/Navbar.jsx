@@ -20,6 +20,7 @@ const Navbar = () => {
     { name: t("features"), href: "/#visualfeatures" },
     { name: t("pricing"), href: "/#pricing" },
     // { name: t("contact"), href: "/#contact" },
+    { name: "Feedback", href: "/feedback" },
   ];
 
   useEffect(() => {
