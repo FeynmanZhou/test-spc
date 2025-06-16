@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['hitalkerbucket.oss-cn-beijing.aliyuncs.com'],
+    domains: ['hitalkerbucket.oss-cn-beijing.aliyuncs.com', 'images.unsplash.com', 'randomuser.me'],
   },
 }
 

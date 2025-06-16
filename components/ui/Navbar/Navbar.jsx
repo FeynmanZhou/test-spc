@@ -19,6 +19,7 @@ const Navbar = () => {
     { name: t("products"), href: "/#hero" },
     { name: t("features"), href: "/#visualfeatures" },
     { name: t("pricing"), href: "/#pricing" },
+    { name: "Training", href: "/training" },
     // { name: t("contact"), href: "/#contact" },
     { name: "Feedback", href: "/feedback" },
   ];
